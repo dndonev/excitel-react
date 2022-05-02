@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { TGridCountry } from '../../types/gridCountry';
 
-import { ICountdown } from '../../models/address';
+import { ICountdown } from '../../models/countdown';
 
 import Spinner from '../Spinner/Spinner';
 import ErrorMessage from '../Error/Error';
