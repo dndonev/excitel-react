@@ -1,0 +1,20 @@
+@import './../../mixins';
+@import '../../variables';
+
+.Pager {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+
+    padding: $spacings-base;
+
+    box-sizing: border-box;
+
+    span {
+        @include pinkText;
+
+        cursor: pointer;
+    }
+}

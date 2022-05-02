@@ -1,0 +1,58 @@
+@import './../../mixins';
+@import '../../variables';
+
+.searchBoxContainer {
+    width: 100%;
+    padding: $spacings-base $spacings-base 0 $spacings-base;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.searchBox {
+    width: 100%;
+
+    margin-top: $spacings-large;
+    padding: $spacings-small;
+
+    box-sizing: border-box;
+}
+
+.suggestions {
+    position: absolute;
+    border: 1px solid $color-pink;
+    border-top: none;
+    border-bottom: none;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    max-height: 200px;
+    overflow-y: scroll;
+
+    margin: 0 $spacings-base $spacings-base $spacings-base;
+ 
+    div {
+        padding: $spacings-base;
+        cursor: pointer;
+        background-color: white; 
+        border-bottom: 1px solid $color-grey;
+        box-sizing: border-box;
+
+        &:hover {
+            background-color: rgba($color: $color-pink, $alpha: 0.2);
+        }
+        
+        &:focus {
+            background-color: rgba($color: $color-pink, $alpha: 0.2);
+        }
+    }
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,51 @@
+@mixin pinkText {
+    cursor: pointer;
+    color: $color-pink;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+@mixin flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+@mixin spinner {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+
+    &:after {
+        content: " ";
+        display: block;
+        width: 4rem;
+        height: 4rem;
+    
+        margin: 0.5rem;
+        border-radius: 50%;
+    
+        border: 6px solid #cef;
+        border-color: #cef transparent #cef transparent;
+        animation: spinner 1.2s linear infinite;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@mixin textWrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

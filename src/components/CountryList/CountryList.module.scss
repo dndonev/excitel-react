@@ -1,0 +1,60 @@
+@import './../../mixins';
+@import '../../variables';
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    align-items: center;
+    padding: $spacings-base;
+
+    background-color: $background-white;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    
+    padding: $spacings-base;
+}
+
+.progressBar {
+    @keyframes fadeIn {
+        100% {
+            background-position: left;
+        }
+    }
+
+    background: linear-gradient(to right, rgba($color: $color-pink, $alpha: 0.2) 50%, transparent 0);
+    background-size: 200% 100%;
+    background-position: right;
+    animation: fadeIn 1s 1s forwards;
+}
+
+.listItem {
+    @include grid;
+
+    &:hover {
+        background-color: #F4F4F5;
+    }
+
+    span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.listHeader {
+    @include grid;
+
+    color: $color-pink;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+
+    span {
+        cursor: pointer;
+    }
+}

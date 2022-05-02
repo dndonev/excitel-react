@@ -1,0 +1,15 @@
+@import './../../mixins';
+@import '../../variables';
+
+.searchBoxContainer {
+    padding: $spacings-base;
+}
+
+.searchBox {
+    width: 100%;
+
+    margin-top: $spacings-large;
+    padding: $spacings-small;
+
+    box-sizing: border-box;
+}
